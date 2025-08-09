@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(white, silver);
+}
+
+.container {
+    width: 400px;
+    margin: 30px;
+    padding: 15px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    border-bottom: 2px solid rgb(161, 155, 155);
+    padding: 8px;
+}
+
+#input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#input-box input {
+    width: 78%;
+    padding: 6px;
+    font-size: 15px;
+}
+
+#input-box button {
+    width: 20%;
+    padding: 6px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: green;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#input-box button:hover {
+    background-color: darkgreen;
+}
+
+#input-box button:active {
+    transform: scale(0.95);
+}
+
+#todo-list ul li {
+    display: flex;
+    border: 0.6px solid black;
+    padding: 2px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#todo-list ul li p {
+    width: 80%;
+    padding: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+#todo-list ul li button {
+    width: 20%;
+    font-weight: bolder;
+    background-color: rgb(202, 16, 16);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#todo-list ul li button:hover {
+    background-color: darkred;
+}
+
+#todo-list ul li button:active {
+    transform: scale(0.95);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 450px) {
+    .container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    #input-box input {
+        width: 70%;
+    }
+
+    #input-box button {
+        width: 25%;
+    }
+
+    #todo-list ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #todo-list ul li button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container h1 {
+        font-size: 30px;
+    }
+
+    #input-box input {
+        font-size: 14px;
+    }
+
+    #input-box button {
+        font-size: 14px;
+    }
+
+    #todo-list ul li {
+        font-size: 14px;
+    }
+}
